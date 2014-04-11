@@ -1,0 +1,18 @@
+* {
+	font-family: "Comic sans MS", Fantasy, Serif;
+}
+h1{
+		font-size: xx-large;
+		font-variant: small-caps;
+}
+.pepino {
+	font-style: oblique;
+	color: green;
+}
+#salchicha{
+	font-weight: bold;
+	font-stretch: ultra-condensed;
+	font-style: italic;
+	line-height: 2;
+}
+

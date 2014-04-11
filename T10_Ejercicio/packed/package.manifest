@@ -1,0 +1,10 @@
+{
+	"version": "1.0",
+	"name": "Geolocalización",
+	"description": "Ejercicio del modulo 10 del curso MOOC de FirefoxOS de MiriadaX",
+	"package_path": "/host/0B_QxbwUwuUChRnI3T3pVRFl2SnM/packed/package.zip",
+	"developer": {
+		"name": "Juan Manuel Moratilla",
+		"url": "jmmoratilla@gmail.com"
+	}
+}

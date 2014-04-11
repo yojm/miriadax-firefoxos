@@ -1,0 +1,140 @@
+@font-face {
+	font-family: 'firefoxOS';
+	src: url('./fonts/FiraSans-Regular.woff');
+}
+
+html {
+	font-size: 12px;
+	font-family: 'firefoxOS';
+	height:100%;
+	height:100%;
+}
+
+body {
+	background-color: #5C5C5C;
+	background-image: url("images/titanes.png"); 
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-attachment:fixed;
+	background-size:480px;
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	top: 0;
+	left: 0;
+	position:absolute;
+
+}
+
+header {
+	top: 0;
+	left: 0;
+	position: fixed;
+	min-width: 100%;
+    height: 5rem;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	color: rgb(255, 255, 255);
+	background-color: rgb(249, 124, 23);
+	z-index: 1;
+}
+
+header h1 {
+    text-align:left;
+	text-height:5rem;
+    height: 5rem;
+	font-size: 2.5rem;
+	line-height: 5rem;
+	margin-left:3rem;
+	margin-right:5rem;
+	margin-top:auto;
+	margin-bottom:auto;
+	padding:auto;
+	text-overflow: ellipsis;
+	overflow-style:marquee-line;
+	overflow:hidden;
+	display: block;
+	z-index: 10;
+
+}
+
+header a>.icon-back {
+	width: 3rem;
+	height: 5rem;
+	float: left;
+	background-image: url("icons/actionicon_back_30x30.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	font-size: 0;	
+	line-height: 5rem;		
+}
+header a>.icon-back:hover {
+	background-color: rgb(220, 106, 14);		
+}
+
+header a>.icon-help {
+	width: 5rem;
+	height: 5rem;	
+	float:right;
+	background-image: url("icons/actionicon_help2_30x30.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size:3rem;
+	font-size: 0;
+	line-height: 5rem;
+}
+
+header a>.icon-help:hover {
+	background-color: rgb(220, 106, 14);		
+}
+
+
+
+/***MENU***********************************************************************************************/
+.menu{
+	position: relative;
+	top: 5rem;
+	font-size: 1.5rem;
+	font-weight:bold;
+	margin: 0 auto;
+	padding:0;
+}
+
+.menu ul{
+	list-style-type: none;
+	margin: 0rem;
+	padding: 0rem;	
+}
+
+.menu a {
+	display: block;
+	padding:1rem;
+	margin: 3rem;
+	border-style:groove;
+	border-width:0.7rem;
+	border-color:#000000);
+	text-align:left;
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.menu a:hover {
+	transition: background 2s;
+	-webkit-transition: background 2s; 
+	background: #8D8D8D;		
+}
+
+@keyframes blink {  
+    0% { color: rgb(249, 124, 23); }
+    100% { color: #5C5C5C; }
+}
+@-webkit-keyframes blink {
+    0% { color: rgb(249, 124, 23); }
+    100% { color: #5C5C5C; }
+}
+.menu a:active { 
+	-webkit-animation: blink 0.5s ease-in infinite;
+    animation: blink 0.5s ease-in infinite;
+}

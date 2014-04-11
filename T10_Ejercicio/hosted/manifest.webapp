@@ -1,0 +1,23 @@
+{
+  "version": "1.0",
+  "name": "Geolocalización",
+  "description": "Ejercicio del modulo 10 del curso MOOC de FirefoxOS de MiriadaX",
+  "launch_path": "/host/0B_QxbwUwuUChRnI3T3pVRFl2SnM/hosted/T10_Ejercicio.htm",
+  "icons": {
+    "16":  "/host/0B_QxbwUwuUChRnI3T3pVRFl2SnM/hosted/ico_16.png",
+    "48":  "/host/0B_QxbwUwuUChRnI3T3pVRFl2SnM/hosted/ico_48.png",
+    "128": "/host/0B_QxbwUwuUChRnI3T3pVRFl2SnM/hosted/ico_128.png"
+  },
+  "permissions": {
+    "geolocation": {
+      "description": "Permite ver tu localizacion"
+    },
+    "storage": {
+      "description": "Almacena rutas localmente"
+    }
+  },
+  "developer": {
+    "name": "Juan Manuel Moratilla",
+    "url": "jmmoratilla@gmail.com"
+  }
+}

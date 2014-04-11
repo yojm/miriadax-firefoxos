@@ -1,0 +1,13 @@
+{
+  "name": "Titanes del ajedrez",
+  "description": "Titanes del ajedrez",
+  "launch_path": "/T4_Ejercicio.html",
+  "icons": {
+    "16": "/icons/titanes60x60.png"
+  },
+  "developer": {
+    "name": "Your name or organization",
+    "url": "http://your-homepage-here.org"
+  },
+  "default_locale": "en"
+}

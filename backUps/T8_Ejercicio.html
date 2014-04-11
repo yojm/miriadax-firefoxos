@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Cronómetro">
+    <meta name="author" content="Juan Manuel Moratilla">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./T8_Ejercicio.css">
+    <title>Cronómetro</title><meta charset="UTF-8">
+    <script type="text/javascript" src="zepto.min.js"></script>
+    <script type="text/javascript" src="touch.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        localStorage.c = (localStorage.c || "0.0");
+
+        var t, cl = $("#crono");
+        var l = $("#tiempos ul");
+
+        function incr()     { localStorage.c = +localStorage.c + 0.01; }
+        function mostrar()  { cl.html((+localStorage.c).toFixed(2)); };
+        function arrancar() { 
+            t=setInterval(function(){incr(); mostrar()}, 10);
+        };
+        function parar()    {   
+            clearInterval(t);  
+            t=undefined;
+            l.prepend("<li>"+(+localStorage.c).toFixed(2)+"</li>");
+
+        };
+        function cambiar()  { 
+            if (!t) {
+                arrancar();
+                $("#inicializar").css({color: '#C7C7C7'});
+                $("#inicializar").css({visibility:hidden});
+            } else {
+                parar(); 
+                $("#inicializar").css({color: '#333333'});
+            }
+        };
+        function inicializar() { 
+            if (!t) {
+                localStorage.c="0.0"; 
+                l.html(""); 
+                mostrar();
+            }
+        }   
+
+        function ayuda() {
+            alert("Para dispositivos tactiles:\n - \"tap\" para arracar/parar\n - \"swipe\" para inicializar (solo si el cronómetro esta parado)");
+        }
+
+        
+        $("#ayuda").on('click', ayuda);        
+
+        $("section").on( "tap", cambiar);
+        $("section").on( "swipe", inicializar);
+
+
+        $("#cambiar").on('click', cambiar);
+        $("#inicializar").on('click', inicializar);
+
+        mostrar();
+
+        window.onbeforeunload = function() {
+            localStorage.c = "0.0";   
+        }
+      });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <a href="javascript:history.back()"><span class="icon-back">back</span></a>
+        <a href="#"><span class="icon-help" id="ayuda">ayuda</span></a>
+        <h1>Cronómetro</h1>
+    </header>
+
+    <section>
+        <h1><span id="crono"> 0.0 </span><br>segundos</h1>
+        <div id="tiempos"><ul></ul></div>
+    </section>
+
+    <footer>
+        <button type="button" id="cambiar"> Arrancar/Parar </button>
+        <button type="button" id="inicializar">  Inicializar </button>
+    </footer>
+
+</body>
+</html>

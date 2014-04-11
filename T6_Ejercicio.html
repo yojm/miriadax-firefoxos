@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="description" content="Primera practica Javascript. Listar los atributos de DOM location">
+<meta name="author" content="Juan Manuel Moratilla">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
+<title>Valores del objeto LOCATION</title>
+<link rel="stylesheet" href="./T6_Ejercicio.css">
+</head>
+<header>
+	<h1>Valores del objeto LOCATION</h1>
+	<p></p>
+</header>
+<body>
+	<div class="tabla">
+		<h2>Script insertado dentro del HTML</h2>
+		<table id="tabla1" border="1">
+			<tr>
+	  			<th>Propiedad</th>
+	  			<th>Valor</th>
+			</tr>
+		</table>
+		<script language="javascript" type="text/javascript">
+		<!--
+			var table = document.getElementById("tabla1");
+			for(i in location){
+				var row=table.insertRow(-1);
+				var cell1=row.insertCell(0);
+				cell1.innerHTML=i;
+				var cell2=row.insertCell(1);
+				if (typeof location[i] === "string") {
+					cell2.innerHTML=location[i];
+				} else {
+					cell2.innerHTML="no es imprimible";
+				}
+			}
+		//-->
+		</script>
+	</div>
+
+	<div class="tabla">
+		<h2>Llamada a script fuera del HTML</h2>
+		<table id="tabla2" border="1">
+			<tr>
+	  			<th>Propiedad</th>
+	  			<th>Valor</th>
+			</tr>
+		</table>
+		<script language="javascript" type="text/javascript" src="T6_externalFunction.js">
+		</script>
+		<script type="text/javascript">
+			creaTabla("tabla2");
+		</script>
+	</div>
+
+
+</body>
+</html> 

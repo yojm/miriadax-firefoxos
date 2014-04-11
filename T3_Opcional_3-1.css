@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'oficina';
+    src: url('fonts/OSans.otf');
+}
+
+a {
+	color: #5882FA;
+}
+
+a:hover {
+	color: #A9BCF5;	
+}
+
+a:visited {
+	color: #B40404;
+}
+
+body {
+	background: #E0E6F8;
+	font-family: Calibri;
+  	font-size: 18px;
+}
+
+header {
+	width: 90%;
+	color: #E0E6F8;
+	text-align: center;
+	background: #0B173B;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+header h1 {
+	font-size: 44px;
+	font-variant: small-caps;
+	font-weight: bold;
+	font-family: oficina, "Tahoma", Fantasy, Serif;
+}
+
+header p {
+	font-size: 20px;
+	font-family: oficina, "Tahoma", Fantasy, Serif;
+}
+
+h2 {
+	font-size: 30px;
+	font-family: "Times New Roman", Serif;
+}
+
+h3 {
+	font-size: 24px;
+	font-family: "Times New Roman", Serif;
+}
+
+span.boton {
+	font-weight: bold;
+	background: #819FF7;
+
+}
+
+.bloque {
+	width: 90%;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.bloque:hover {
+	background: #EFF2FB;
+}
+
+ul {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+	padding: 0px;
+}
+
+footer {
+	width: 90%;
+	color: #E0E6F8;
+	text-align: center;
+	background: #0B173B; 
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.pruebaTexto1 {
+	font-family: oficina;
+	font-size: 25px;
+	color: green;
+}
+
+.pruebaTexto2 {
+	font-family: 'Arbutus', cursive;
+	font-size: 25px;
+	color: green;
+}
